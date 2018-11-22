@@ -10,12 +10,26 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component{
+  constructor(props){
+    super(props)
+    this.state= {
+      pin:{
+        grim:{
+          source:require("./assets/gs.jpg"),
+          originalWidth:1013,
+          originalHeight:1800,
+        }
+      }
+    }
+  }
   render() {
     return (
       <ScrollView style={styles.container}>
     
+      <Pin pinSource={this.state.pin.grim/>
       <Pin/>
-      
+      <Pin/>
+      <Pin/>
       </ScrollView>
     );
   }

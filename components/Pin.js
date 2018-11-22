@@ -23,7 +23,7 @@ class Pin extends Component {
                 <View style={styles.PinContent}>
               
                     <LocalImage 
-                    source={require("./assets/gs.jpg")} 
+                    source={this.props.pin} 
                     originalWidth={1013}
                     originalHeight={1800}
                     
@@ -62,8 +62,8 @@ class Pin extends Component {
 const styles = StyleSheet.create({
     PinContainer: {
         // flex: 1,
-        alignSelf: "stretch",
-        backgroundColor:"green"
+        // alignSelf: "stretch",
+        // backgroundColor:"green"
     },
     PinHeader: {
         backgroundColor: "white",
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
         backgroundColor:"black"
     },
     PinUserContainer: {
-
+        
     },
     PinUserText: {
 
