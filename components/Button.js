@@ -6,6 +6,7 @@ import PinIcon from "../utils/icons/Pin"
          let bgColor, textWeight, textColor;
          if (this.props.red){
              bgColor="red"
+             textColor="white"
          }
          else{
              bgColor="#cecece",

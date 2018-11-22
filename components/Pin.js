@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, Image } from 'react-native'
-import {  PinIcon } from '../utils/icons'
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native'
 import UtilityNavButton from './UtilityNavButton'
 import Pic from "./assets/gs.jpg"
 import Button from './Button';
+import LocalImage from './LocalImage'
 class Pin extends Component {
     render() {
         return (
+            // <ScrollView>
             <View style={styles.PinContainer}>
                 <View style={styles.PinHeader}>
                     <View style={styles.UtilityNav}>
@@ -21,8 +22,12 @@ class Pin extends Component {
                 </View>
                 <View style={styles.PinContent}>
               
-                    <Text style={styles.ImagePlaceHolder}>
-                        PlaceHolder</Text>
+                    <LocalImage 
+                    source={require("./assets/gs.jpg")} 
+                    originalWidth={1013}
+                    originalHeight={1800}
+                    
+                    />
                 </View>
 
                 <View style={styles.PinMeta}>
@@ -50,18 +55,21 @@ class Pin extends Component {
                     </View>
                 </View>
             </View>
+            /* </ScrollView> */
         )
     }
 }
 const styles = StyleSheet.create({
     PinContainer: {
-        flex: 1,
-        alignSelf: "stretch"
+        // flex: 1,
+        alignSelf: "stretch",
+        backgroundColor:"green"
     },
     PinHeader: {
         backgroundColor: "white",
         flexDirection: "row",
         flex: 1,
+        minHeight:50,
         alignItems: "flex-end",
         justifyContent: "space-between",
         padding: 8
@@ -91,7 +99,6 @@ const styles = StyleSheet.create({
         color: "white"
     },
     PinContent: {
-        flex: 3,
         justifyContent: "center",
         alignItems: "center",
         paddingLeft: 8,
@@ -105,7 +112,7 @@ const styles = StyleSheet.create({
     },
     PinMeta: {
         // flex: 1,
-        backgroundColor: "white",
+        minHeight:60,
         flexDirection: "row",
         paddingBottom: 16,
         paddingTop: 16,
